@@ -24,7 +24,13 @@ public class Invite {
             pst.setString(1,id);
             rs = pst.executeQuery();
             while (rs.next()){
-                return true;
+                String sql2 = "delete from invite where idinvite = ?";
+                pst = conn.prepareStatement(sql2);
+                pst.setString(1,id);
+                int i = pst.executeUpdate();
+                if (i >= 1){
+                    return true;
+                }
             }
         } catch (Exception e) {
             e.printStackTrace();

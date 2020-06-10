@@ -9,7 +9,7 @@ import dao.Invite;
  */
 public class InviteTest {
     public static void main(String[] args) {
-        Boolean inviteInfo = Invite.findInviteInfo("123456");
+        Boolean inviteInfo = Invite.findInviteInfo("1234");
         System.out.println(inviteInfo);
     }
 }
